@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Readex;
+    src: url('ReadexPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: ReadexBold;
+    src: url('ReadexPro-SemiBold.ttf');
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: Readex;
+}
+
+body {
+    background-color: #1E1E1E;
+}
+
+.calc-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40vh;
+    height: fit-content;
+    background: #1E1E1E;
+    box-shadow: -1vh 1vh 2vh rgba(14, 14, 14, 0.2), 1vh -1vh 2vh rgba(14, 14, 14, 0.2), -1vh -1vh 2vh rgba(46, 46, 46, 0.9), 1vh 1vh 2.3vh rgba(14, 14, 14, 0.9), inset 0.06vh 0.06vh 0.12vh rgba(46, 46, 46, 0.3), inset -0.06vh -0.06vh 0.12vh rgba(14, 14, 14, 0.5);
+    border-radius: 2vh;
+    padding: 2vh;
+    max-width: 90%;
+}
+
+.calc-box input{
+    height: 5vh;
+    background-color: #1E1E1E;
+    border: 0.2vh solid #CEBFAD;
+    border-radius: 0.8vh;
+    text-align: center;
+    color: #CEBFAD;
+    font-size: 2vh;
+    margin-bottom: 2.3vh;
+    width: 100%;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+.calc-box input::-webkit-outer-spin-button, .calc-box input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.calc-box .kh{
+    width: 45%;
+}
+
+.calc-box .per{
+    width: 34%;
+}
+
+.pro-txt{
+    color: #CEBFAD;
+    text-align: center;
+    font-size: 1.3vw;
+    display: inline;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.calc {
+    font-size: 2vh;
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    color: #1E1E1E;
+    border: 0.2vh solid #CEBFAD;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 0.5vh;
+    color: #CEBFAD;
+}
+
+.calc::before {
+    content: '';
+    width: 0;
+    height: 800%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #CEBFAD;
+    transition: .3s;
+    z-index: 1;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+
+.calc:hover::before {
+    width: 105%;
+   }
+   
+.calc:hover{
+    color:#1E1E1E;
+}
+.output{
+    position: absolute;
+    font-family: ReadexBold;
+    font-size: 8vh;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color: #CEBFAD;
+}
