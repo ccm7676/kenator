@@ -15,7 +15,7 @@ calcBtn.addEventListener("click", ()=>{
         }
     })
     if(!inputsEmpty){
-        
+        output.innerHTML = (((amount.value/per.value)*KH.value)/"10")*mult.value + " IU";
     }
     return;
 })
